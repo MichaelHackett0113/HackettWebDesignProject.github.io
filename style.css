@@ -1,0 +1,532 @@
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    line-height: 1.6;
+    background: 
+        linear-gradient(135deg, #f6f8fb 0%, #e9eef5 100%),
+        radial-gradient(circle at top left, rgba(9, 132, 227, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at bottom right, rgba(0, 184, 148, 0.05) 0%, transparent 50%);
+    background-attachment: fixed;
+    color: #2d3436;
+}
+
+section {
+    padding: 6rem 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+section:nth-child(even) {
+    background: 
+        linear-gradient(135deg, #ffffff 0%, #f8fafd 100%),
+        radial-gradient(circle at bottom left, rgba(9, 132, 227, 0.03) 0%, transparent 60%);
+    position: relative;
+}
+
+section:nth-child(even)::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%230984e3' fill-opacity='0.02'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    pointer-events: none;
+}
+
+section:nth-child(odd) {
+    background: 
+        linear-gradient(135deg, #f8fafd 0%, #f1f5f9 100%),
+        radial-gradient(circle at top right, rgba(0, 184, 148, 0.03) 0%, transparent 60%);
+    position: relative;
+}
+
+section:nth-child(odd)::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%230984e3' fill-opacity='0.02'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    pointer-events: none;
+}
+
+.info-card, .rental-info, .contact-info {
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafd 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.info-card::after, .rental-info::after, .contact-info::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%230984e3' fill-opacity='0.03' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3C/g%3E%3C/svg%3E");
+    pointer-events: none;
+}
+
+.calendar-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafd 100%);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.calendar-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%230984e3' fill-opacity='0.02' fill-rule='evenodd'%3E%3Cpath d='M12 0l12 12-12 12L0 12z'/%3E%3C/g%3E%3C/svg%3E");
+    pointer-events: none;
+}
+
+.ticket-search input {
+    padding: 1rem;
+    width: 60%;
+    margin-right: 1rem;
+    border: 2px solid #dfe6e9;
+    border-radius: 25px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.ticket-search input:focus {
+    outline: none;
+    border-color: #e30909;
+}
+
+.ticket-search button,
+.rental-info button {
+    background: linear-gradient(135deg, #FF6B6B 0%, #EE5253 100%);
+    color: white;
+    border: none;
+    box-shadow: 0 4px 15px rgba(238, 82, 83, 0.3);
+    transition: all 0.3s ease;
+}
+
+.ticket-search button:hover,
+.rental-info button:hover {
+    background: linear-gradient(135deg, #EE5253 0%, #FF6B6B 100%);
+    box-shadow: 0 6px 20px rgba(238, 82, 83, 0.4);
+}
+
+.event-item button {
+    background: linear-gradient(135deg, #20bf6b 0%, #18a65d 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(32, 191, 107, 0.3);
+}
+
+.event-item button:hover {
+    background: linear-gradient(135deg, #18a65d 0%, #20bf6b 100%);
+    box-shadow: 0 6px 20px rgba(32, 191, 107, 0.4);
+}
+
+.tab-button {
+    background: #f1f2f6;
+    color: #2d3436;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tab-button.active {
+background: linear-gradient(135deg, #bb5757 0%, #a64b4b 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(87, 88, 187, 0.3);
+}
+
+.map-button,
+.view-button {
+    background: linear-gradient(135deg, #d43434 0%, #e06868 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(212, 52, 52, 0.3);
+}
+
+.map-button:hover,
+.view-button:hover {
+    background: linear-gradient(135deg, #e06868 0%, #d43434 100%);
+    box-shadow: 0 6px 20px rgba(212, 52, 52, 0.4);
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.info-card {
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+}
+
+.info-card i {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #e30909;
+}
+
+.planner-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.rental-info, .contact-info {
+    text-align: center;
+    padding: 3rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.rental-info:hover, .contact-info:hover {
+    transform: translateY(-5px);
+}
+
+.event-item {
+    background: white;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.event-item:hover {
+    transform: translateY(-3px);
+}
+
+.event-item button {
+    background: #e30909;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.event-item button:hover {
+    background: #cc0000;
+}
+
+footer {
+    background: #2d3436;
+    color: white;
+    text-align: center;
+    padding: 3rem;
+}
+
+.social-links a {
+    color: white;
+    margin: 0 1rem;
+    font-size: 1.8rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #e30909;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    text-align: center;
+    margin: 20px;
+}
+
+.calendar-day {
+    padding: 10px;
+    cursor: pointer;
+    border: 1px solid #ddd;
+}
+
+.calendar-day:hover {
+    background-color: #f0f0f0;
+}
+
+.has-event {
+    background-color: #ffe6e6;
+    font-weight: bold;
+}
+
+nav {
+    background-color: #1a1a1a;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-links li {
+    margin: 0 25px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+    border-radius: 3px;
+}
+
+.nav-links a:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+#calendarDays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    padding: 10px;
+}
+
+#calendarDays div {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#calendarDays div:hover {
+    background-color: #f0f0f0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Raleway:wght@300;400;500&display=swap');
+
+:root {
+    --red-gradient: linear-gradient(135deg, #E63946 0%, #B31B1B 100%);
+    --grey-gradient: linear-gradient(135deg, #333333 0%, #1a1a1a 100%);
+    --glass-effect: rgba(255, 255, 255, 0.1);
+    --shadow-red: rgba(230, 57, 70, 0.2);
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: -0.5px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+p, a, button, input {
+    font-family: 'Raleway', sans-serif;
+}
+
+.section-background {
+    position: relative;
+    overflow: hidden;
+}
+
+.section-background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 50%, var(--shadow-red) 0%, transparent 25%),
+        radial-gradient(circle at 80% 50%, var(--shadow-red) 0%, transparent 25%);
+    opacity: 0.7;
+    z-index: 0;
+}
+
+.modern-button {
+    background: var(--red-gradient);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    color: var(--white);
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px var(--shadow-red);
+}
+
+.modern-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 0.3),
+        transparent
+    );
+    transition: 0.5s;
+}
+
+.modern-button:hover::before {
+    left: 100%;
+}
+
+.hover-card {
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.hover-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent 50%, rgba(230, 57, 70, 0.1) 100%);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.hover-card:hover {
+    transform: translateY(-5px);
+}
+
+.hover-card:hover::after {
+    opacity: 1;
+}
+
+
+.decorative-line {
+    height: 3px;
+    background: var(--red-gradient);
+    position: relative;
+    border-radius: 3px;
+}
+
+.decorative-line::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: 0;
+    width: 30px;
+    height: 7px;
+    background: var(--primary-red);
+    border-radius: 3px;
+}
+
+.nav-links a {
+    position: relative;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--white);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.calendar-container {
+    background: 
+        linear-gradient(135deg, var(--white) 0%, var(--off-white) 100%),
+        repeating-linear-gradient(45deg, var(--grey-light) 0px, var(--grey-light) 1px, transparent 1px, transparent 10px);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 
+        0 10px 30px rgba(0, 0, 0, 0.1),
+        0 1px 3px rgba(230, 57, 70, 0.1);
+}
+.hero-image-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 15px;
+    text-align: center;
+  }
+  
+  .hero-image {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .hero-image:hover {
+    transform: scale(1.02);
+  }
+  
+  @media (max-width: 768px) {
+    .hero-image {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+    }
+  }
+.seating-chart-card {
+    grid-column: span 2;
+}
+
+.seating-chart-image {
+    width: 225px;
+    height: auto;
+    margin-top: 1rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.seating-chart-image:hover {
+    transform: scale(1.05);
+}
+
+@media screen and (max-width: 768px) {
+    .seating-chart-card {
+        grid-column: span 1;
+    }
+    
+    .seating-chart-image {
+        width: 100%;
+        max-width: 225px;
+    }
+}

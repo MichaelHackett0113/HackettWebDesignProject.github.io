@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FBLA 2024 Website Design Project</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header id="home" class="section-background">
+        <h1 id="header" class="gradient-text">Welcome to The FunFair Community Arena!</h1>
+        <p id="paragraph" class="modern-text">A 3,500-Seat Multi-Purpose Venue for Sports, Concerts, and Events</p>
+        <div class="decorative-line"></div>
+    </header>
+
+    <div class="hero-image-container">
+        <img src="https://rbsdesigngroup.com/wp-content/uploads/IMG_2916-400x400.jpg" alt="RBS Design Group" class="hero-image">
+      </div>
+
+    <!-- Navigation -->
+    <nav class="glass-card">
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#events">Calendar</a></li>
+            <li><a href="#tickets">Tickets</a></li>
+            <li><a href="#info">Information</a></li>
+            <li><a href="#planner">Event Planning</a></li>
+        </ul>
+    </nav>
+
+    <!-- Events Calendar Section -->
+    <section id="events" class="section-background">
+        <h2 class="gradient-text">Event Calendar</h2>
+        <div class="calendar-container glass-card">
+            <div id="calendar"></div>
+        </div>
+    </section>
+
+    <!-- Box Office Section -->
+    <section id="tickets" class="section-background">
+        <h2 class="gradient-text">Box Office</h2>
+        <div class="ticket-container glass-card">
+            <div class="ticket-search">
+                <input type="text" id="eventSearch" placeholder="Search events...">
+                <button onclick="searchEvents()" class="modern-button">Search</button>
+            </div>
+            <div id="eventList"></div>
+        </div>
+    </section>
+
+<!-- Information Section -->
+<section id="info" class="section-background">
+    <h2 class="gradient-text">Venue Information</h2>
+    <div class="info-grid">
+        <div class="info-card hover-card glass-card">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>Directions</h3>
+            <p>Located at 123 Arena Way<br>Your City, State 12345</p>
+        </div>
+        <div class="info-card hover-card glass-card">
+            <i class="fas fa-clipboard-list"></i>
+            <h3>Policies</h3>
+            <ul>
+                <li>Clear Bag Policy</li>
+                <li>No Outside Food/Drinks</li>
+                <li>No Smoking</li>
+            </ul>
+        </div>
+        <div class="info-card hover-card glass-card">
+            <i class="fas fa-concierge-bell"></i>
+            <h3>Amenities</h3>
+            <ul>
+                <li>Concession Stands</li>
+                <li>Free Parking</li>
+                <li>Wheelchair Accessible</li>
+            </ul>
+        </div>
+        <div class="info-card hover-card glass-card seating-chart-card">
+            <i class="fas fa-chair"></i>
+            <h3>Seating Chart</h3>
+            <img src="https://mcdn.ticketseating.com/450w/13267-stockwell-jadwin-gymnasium-basketball.jpg" alt="Seating Chart" class="seating-chart-image">
+        </div>
+    </div>
+</section>
+
+    <!-- Event Planning Section -->
+    <section id="planner" class="section-background">
+        <h2 class="gradient-text">Plan Your Event</h2>
+        <div class="planner-container">
+            <div class="rental-info hover-card glass-card">
+                <h3>Venue Rental</h3>
+                <p>Host your next event in our state-of-the-art facility</p>
+                <button onclick="showRentalForm()" class="modern-button">Arena Information</button>
+            </div>
+            <div class="contact-info hover-card glass-card">
+                <h3>Contact Us</h3>
+                <p>Email: events@funfairarena.com</p>
+                <p>Phone: (555) 123-4567</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="section-background">
+        <div class="footer-content glass-card">
+            <div class="social-links">
+                <a href="#" class="gradient-text"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="gradient-text"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="gradient-text"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p>&copy; 2024 FunFair Arena. All rights reserved.</p>
+            <p> Website Created by Michael and Kyle Hackett</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
